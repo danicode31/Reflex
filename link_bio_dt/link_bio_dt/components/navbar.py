@@ -4,7 +4,7 @@ import reflex as rx
 def navbar() -> rx.Component:
     return rx.center(
                 rx.vstack(
-                    rx.text("Daniel Gustavo Taboada",height="100%",font_family="Diphylleia", size="9",color = "#FFFFFF"),
+                    rx.text("Daniel Taboada",height="100%",font_family="Diphylleia", size="9",color = "#FFFFFF"),
                     margin= "2em",
                     width= "auto",
                     box_shadow = "-10px -10px #0073b0",

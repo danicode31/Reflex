@@ -20,5 +20,3 @@ def link_button(text:str, url:str, color:str) -> rx.Component:
                         "opacity": 1,
                 }
         )
-
-

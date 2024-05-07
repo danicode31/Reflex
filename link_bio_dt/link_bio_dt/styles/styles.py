@@ -29,7 +29,8 @@ BASE_STYLE = {
     rx.text:{
         "color" : color.CONTENT.value,
         "size" : Spacer.SMALL.value,
-        "font_family" : font.FONT_TEXT.value
+        "font_family" : "Diphylleia"
     
     }
+    
 }    

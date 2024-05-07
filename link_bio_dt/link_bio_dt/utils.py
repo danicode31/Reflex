@@ -1,6 +1,15 @@
 from datetime import datetime, timedelta, timezone
 import pytz
 import reflex as rx
+import link_bio_dt.styles.color as color
+
+from datetime import datetime 
+
+class MomentState(rx.State):
+    date_now: datetime = datetime.now()
+    
+    
+#rx.moment(MomentState.date_now, format="YYYY-MM-DD", color = color.Color.PRIMARY.value)
 
 # Común
 
