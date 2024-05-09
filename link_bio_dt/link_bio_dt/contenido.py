@@ -1,10 +1,15 @@
 import reflex as rx
 import link_bio_dt.styles.styles as styles
 import link_bio_dt.styles.color as color
+from link_bio_dt.components.link_title import link_title
+
 from datetime import datetime 
 
 class MomentState(rx.State):
     date_now: datetime = datetime.now()
+    
+# rx.text("03-04-2024 al ",rx.moment(MomentState.date_now, format="DD-MM-YYYY", color = color.Color.PRIMARY.value),
+#                                                color = styles.color.PRIMARY.value),
 
 def contenido() -> rx.Component:
     return  rx.box(
@@ -38,13 +43,17 @@ def contenido() -> rx.Component:
                 rx.box(
                     rx.accordion.root(
                             rx.accordion.item(
-                                header=rx.text("03-04-2024 al ",rx.moment(MomentState.date_now, format="DD-MM-YYYY", color = color.Color.PRIMARY.value),
-                                               color = styles.color.PRIMARY.value),
-                                        
+                                # NEORIS
+                                header=rx.text("Actualmente",color = styles.color.PRIMARY.value),
+                                     
                                 content= rx.center(
                                     rx.flex(
-                                        rx.text(
-                                            """NEORIS""",size='5',color = styles.color.CONTENT.value
+                                            rx.hstack(rx.image(src="neoris_logo.jpeg",
+                                                    width="32px",
+                                                    heigth="32px", 
+                                                    ),
+                                            rx.text(link_title("Neoris",'https://neoris.com/'))
+
                                         ),rx.text(
                                             """ Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services. 
                                             """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 0px',size='2', text_align = 'justify'
@@ -54,29 +63,59 @@ def contenido() -> rx.Component:
                                             """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 0px',size='2', text_align = 'justify'
                                         ),
                                         rx.text(
-                                            """ • Relevamiento de Server """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
+                                            """ • Relevamiento y análisis de los requerimientos de negocio """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
                                         ),
                                         rx.text(
                                             """ • Planificación de Desacople """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
                                         ),
                                         rx.text(
-                                            """ • Modelado de datos para la migración """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
+                                            """ • Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
                                         ),
                                         rx.text(
-                                            """ • Pruebas para la migración """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
+                                            """ • Análisis y diseño del modelo de datos """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
                                         ),
                                         rx.text(
-                                            """ • Puesta en producción """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
+                                            """ • Interacción con usuarios claves """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
                                         ),
                                         rx.text(
                                             """ • Mantenimiento de modelos """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
                                         ),
+                                        rx.popover.root(
+                                                rx.popover.trigger(
+                                                    rx.button("Tecnologías Utilizadas",color_scheme='gold'),
+                                                ),
+                                                rx.popover.content(
+                                                    rx.flex(
+                                                        rx.text(rx.blockquote('Teradata | SQL Server 2019 | SSIS | Python | Jira | MS Excel')),
+                                                        rx.popover.close(
+                                                            rx.button("Cerrar",color_scheme='gold'),
+                                                        ),
+                                                        direction="column",
+                                                        spacing="3",
+                                                        
+                                                    ),
+                                                    
+                                                ),
+                                        #     ),
+                                        # rx.hstack(
+                                        #     rx.text('Tecnologías Utilizadas',color = styles.color.CONTENT.value,size='4'),
+                                        #     rx.text(rx.blockquote('Teradata | SQL Server 2019 | SSIS | Python | Jira | MS Excel',size='3',weight="bold"
+                                                    
+                                        #             ),        
+                                        #     ),
+                                            # margin = '10px',
+                                            # padding = '20px'
+                                        ),
                                         direction="column",
                                         spacing="4",
+                                        margin = styles.Spacer.SMALL.value,
+                                        padding = styles.Spacer.DEFAULT.value,
+                                        bg = color.Color.SECONDARY.value
                                     ),
                                     
                                 )
                             ),
+                            # CDA Informática
                             rx.accordion.item(
                                 header=rx.text("2023 - 2024",
                                                color = styles.color.PRIMARY.value),
@@ -84,31 +123,40 @@ def contenido() -> rx.Component:
                                                 color = styles.color.CONTENT.value),
                                 
                             ),
+                            # CODERE BI
                             rx.accordion.item(
                                 header=rx.text("2020 - 2023",
                                                color = styles.color.PRIMARY.value),
                                 content=rx.text("The third accordion item's content",
                                             color = styles.color.CONTENT.value),
                             ),
+                            # CODERE CONO SUR
                              rx.accordion.item(
                                 header=rx.text("2017 - 2019",
                                                color = styles.color.PRIMARY.value),
                                 content=rx.text("The third accordion item's content",
                                             color = styles.color.CONTENT.value),
                             ),
+                            # CODERE CONCILIACIONES
                               rx.accordion.item(
                                 header=rx.text("2015 - 2016",
                                                color = styles.color.PRIMARY.value),
                                 content=rx.text("The third accordion item's content",
                                             color = styles.color.CONTENT.value),
                             ),
+                            # CODERE SALA LANUS
                                rx.accordion.item(
                                 header=rx.text("2010 - 2014",
                                                color = styles.color.PRIMARY.value),
                                 content=rx.text("The third accordion item's content",
                                             color = styles.color.CONTENT.value),
-                                
-                                
+                            ),
+                            # PASANTIA EPSON
+                               rx.accordion.item(
+                                header=rx.text("2008 - 2009",
+                                               color = styles.color.PRIMARY.value),
+                                content=rx.text("The third accordion item's content",
+                                            color = styles.color.CONTENT.value),      
                             ),
                             collapsible = True,
                             type = "multiple",
