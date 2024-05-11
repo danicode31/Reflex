@@ -1,15 +1,11 @@
 import reflex as rx
 import link_bio_dt.styles.styles as styles
 import link_bio_dt.styles.color as color
+import link_bio_dt.constants as constants
 from link_bio_dt.components.link_title import link_title
+from link_bio_dt.components.text_content import text_content
+from link_bio_dt.components.text_content import tecno_utils
 
-from datetime import datetime 
-
-class MomentState(rx.State):
-    date_now: datetime = datetime.now()
-    
-# rx.text("03-04-2024 al ",rx.moment(MomentState.date_now, format="DD-MM-YYYY", color = color.Color.PRIMARY.value),
-#                                                color = styles.color.PRIMARY.value),
 
 def contenido() -> rx.Component:
     return  rx.box(
@@ -52,60 +48,21 @@ def contenido() -> rx.Component:
                                                     width="32px",
                                                     heigth="32px", 
                                                     ),
-                                            rx.text(link_title("Neoris",'https://neoris.com/'))
+                                            rx.text(link_title("Neoris",constants.NEORIS))
 
-                                        ),rx.text(
-                                            """ Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services. 
-                                            """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 0px',size='2', text_align = 'justify'
                                         ),
-                                        rx.text(
-                                            """ A continuación se listan algunas de las tareas que se realizaron y/o, en las cuales estoy trabajando actualmente.
-                                            """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 0px',size='2', text_align = 'justify'
-                                        ),
-                                        rx.text(
-                                            """ • Relevamiento y análisis de los requerimientos de negocio """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
-                                        ),
-                                        rx.text(
-                                            """ • Planificación de Desacople """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
-                                        ),
-                                        rx.text(
-                                            """ • Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
-                                        ),
-                                        rx.text(
-                                            """ • Análisis y diseño del modelo de datos """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
-                                        ),
-                                        rx.text(
-                                            """ • Interacción con usuarios claves """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
-                                        ),
-                                        rx.text(
-                                            """ • Mantenimiento de modelos """,color = styles.color.CONTENT.value, margin = '10px 0px 0px 20px',size='1'
-                                        ),
-                                        rx.popover.root(
-                                                rx.popover.trigger(
-                                                    rx.button("Tecnologías Utilizadas",color_scheme='gold'),
-                                                ),
-                                                rx.popover.content(
-                                                    rx.flex(
-                                                        rx.text(rx.blockquote('Teradata | SQL Server 2019 | SSIS | Python | Jira | MS Excel')),
-                                                        rx.popover.close(
-                                                            rx.button("Cerrar",color_scheme='gold'),
-                                                        ),
-                                                        direction="column",
-                                                        spacing="3",
-                                                        
-                                                    ),
-                                                    
-                                                ),
-                                        #     ),
-                                        # rx.hstack(
-                                        #     rx.text('Tecnologías Utilizadas',color = styles.color.CONTENT.value,size='4'),
-                                        #     rx.text(rx.blockquote('Teradata | SQL Server 2019 | SSIS | Python | Jira | MS Excel',size='3',weight="bold"
-                                                    
-                                        #             ),        
-                                        #     ),
-                                            # margin = '10px',
-                                            # padding = '20px'
-                                        ),
+                                        rx.text(text_content(""" Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services.""")),
+                                        rx.text.strong(text_content(""" Tareas Realizadas:""")),
+                                        rx.text.em(text_content(""" • Relevamiento y análisis de los requerimientos de negocio """)),
+                                        rx.text.em(text_content(""" • Planificación de Desacople """)),
+                                        rx.text.em(text_content(""" • Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server """)),
+                                        rx.text.em(text_content(""" • Mapeo de datos """)),
+                                        rx.text.em(text_content(""" • Análisis y diseño del modelo de datos """)),
+                                        rx.text.em(text_content(""" • Interacción con usuarios claves """)),
+                                        rx.text.em(text_content(""" • Mantenimiento de modelos """)),
+                                        rx.text(tecno_utils(constants.TECNOLOGIAS_NEORIS),align='right'),
+                                        
+                                        
                                         direction="column",
                                         spacing="4",
                                         margin = styles.Spacer.SMALL.value,
@@ -117,18 +74,72 @@ def contenido() -> rx.Component:
                             ),
                             # CDA Informática
                             rx.accordion.item(
-                                header=rx.text("2023 - 2024",
-                                               color = styles.color.PRIMARY.value),
-                                content=rx.text("The second accordion item's content",
-                                                color = styles.color.CONTENT.value),
+                                header=rx.text("2023 - 2024",color = styles.color.PRIMARY.value),
+                                     
+                                content= rx.center(
+                                    rx.flex(
+                                            rx.hstack(rx.image(src="cda_informatica_logo.jpeg",
+                                                    width="32px",
+                                                    heigth="32px", 
+                                                    ),
+                                            rx.text(link_title("CDA Informática",constants.CDA))
+
+                                        ),
+                                        rx.text(text_content(""" Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services.""")),
+                                        rx.text(text_content(""" A continuación se listan algunas de las tareas que se realizaron y/o, en las cuales estoy trabajando actualmente.""")),
+                                        rx.text(text_content(""" • Relevamiento y análisis de los requerimientos de negocio """)),
+                                        rx.text(text_content(""" • Planificación de Desacople """)),
+                                        rx.text(text_content(""" • Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server """)),
+                                        rx.text(text_content(""" • Mapeo de datos """)),
+                                        rx.text(text_content(""" • Análisis y diseño del modelo de datos """)),
+                                        rx.text(text_content(""" • Interacción con usuarios claves """)),
+                                        rx.text(text_content(""" • Mantenimiento de modelos """)),
+                                        rx.text(tecno_utils(constants.TECNOLOGIAS_CDA),align='right'),
+                                        
+                                        
+                                        direction="column",
+                                        spacing="4",
+                                        margin = styles.Spacer.SMALL.value,
+                                        padding = styles.Spacer.DEFAULT.value,
+                                        bg = color.Color.SECONDARY.value
+                                    ),
+                                    
+                                )
                                 
                             ),
                             # CODERE BI
                             rx.accordion.item(
-                                header=rx.text("2020 - 2023",
-                                               color = styles.color.PRIMARY.value),
-                                content=rx.text("The third accordion item's content",
-                                            color = styles.color.CONTENT.value),
+                                header=rx.text("2020 - 2023",color = styles.color.PRIMARY.value),
+                                     
+                                content= rx.center(
+                                    rx.flex(
+                                            rx.hstack(rx.image(src="codere_logo.jpeg",
+                                                    width="32px",
+                                                    heigth="32px", 
+                                                    ),
+                                            rx.text(link_title("Codere",constants.CODERE))
+
+                                        ),
+                                        rx.text(text_content(""" Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services.""")),
+                                        rx.text(text_content(""" A continuación se listan algunas de las tareas que se realizaron y/o, en las cuales estoy trabajando actualmente.""")),
+                                        rx.text(text_content(""" • Relevamiento y análisis de los requerimientos de negocio """)),
+                                        rx.text(text_content(""" • Planificación de Desacople """)),
+                                        rx.text(text_content(""" • Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server """)),
+                                        rx.text(text_content(""" • Mapeo de datos """)),
+                                        rx.text(text_content(""" • Análisis y diseño del modelo de datos """)),
+                                        rx.text(text_content(""" • Interacción con usuarios claves """)),
+                                        rx.text(text_content(""" • Mantenimiento de modelos """)),
+                                        rx.text(tecno_utils(constants.TECNOLOGIAS_CODERE_BI),align='right'),
+                                        
+                                        
+                                        direction="column",
+                                        spacing="4",
+                                        margin = styles.Spacer.SMALL.value,
+                                        padding = styles.Spacer.DEFAULT.value,
+                                        bg = color.Color.SECONDARY.value
+                                    ),
+                                    
+                                )
                             ),
                             # CODERE CONO SUR
                              rx.accordion.item(

@@ -1,6 +1,6 @@
 import reflex as rx
 import link_bio_dt.styles.color as color
-
+import link_bio_dt.constants as constants
 
 def footer() -> rx.Component:
     return rx.center(
@@ -16,7 +16,7 @@ def footer() -> rx.Component:
                                 size="1",
                                 color = color.Color.PRIMARY.value,
                                 opacity = "80%",
-                                padding = "10px"), href="https://reflex.dev/",
+                                padding = "10px"), href=constants.REFLEX_WEB,
                                 is_external=True,
                                 text_decoration = "None",
                                 opacity = "0.6",
