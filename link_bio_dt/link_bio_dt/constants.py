@@ -3,7 +3,7 @@
 
 # Tecnologias y herramientas
 TECNOLOGIAS_NEORIS = ['Teradata','SQL Server 2019','SSIS','Python','Jira','Manejo de Control-M','MS Excel']
-TECNOLOGIAS_CDA = ['Teradata','POWER BI','SSMS','Report Builder','Trello','Manejo de Control-M','MS Excel']
+TECNOLOGIAS_CDA = ['Teradata','POWER BI Cloud','SSMS','Report Builder','Trello','Manejo de Control-M','MS Excel']
 TECNOLOGIAS_CODERE_BI = ['POWER BI','SSIS','SSAS','SSRS','Python','Jira','Reporting Services','MS Excel']
 
 

@@ -3,6 +3,7 @@ from link_bio_dt.components.navbar import navbar
 from link_bio_dt.views.header.header import header
 from link_bio_dt.links.links import links
 from link_bio_dt.components.footer import footer
+import link_bio_dt.utils as utils
 import link_bio_dt.styles.styles as styles
 from link_bio_dt.contenido import contenido
 
@@ -39,6 +40,7 @@ def index() -> rx.Component:
     
 
 app = rx.App(
+    title = utils.index_title,
     styles = styles.BASE_STYLE,
     
 )
