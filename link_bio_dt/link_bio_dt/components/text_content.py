@@ -15,12 +15,14 @@ def tecno_utils(text:list) -> rx.Component:
                             ),
                             rx.popover.content(
                                 rx.flex(
+                                    rx.vstack(
                                     rx.text(rx.blockquote(' | '.join(text))),
                                     direction='column',
                                     spacing='4',                                   
                                 ),
                                 align='end'
                             ),
+                        ),
 
                     ),           
                     

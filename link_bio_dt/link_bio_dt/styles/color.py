@@ -6,6 +6,7 @@ class Color(Enum):
     SECONDARY = "#2f4a6577"
     BACKGROUND = "#161b22"
     CONTENT = "#FFFFFF"
+    BGACCORDION = "#272A2D"
     
 
 class TextColor(Enum):

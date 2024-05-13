@@ -11,27 +11,27 @@ def footer() -> rx.Component:
                         color = "#FFFFFF",
                         opacity = "50%"),
                         
-                        rx.link(rx.text("Built with Reflex",
-                        size="1",
-                        text_align_content = 'center',
-                        color = color.Color.PRIMARY.value,
-                        opacity = "80%",
-
-                        
-                        ), href=constants.REFLEX_WEB,
-                        is_external=True,
-                        text_decoration = "None",
-                        opacity = "0.6",
-                        border_radius="1em",
-                        _hover={
-                                "opacity": 1,
-                        },
-                        
-                        ),                                
-       
+                        rx.link(
+                                rx.hstack(
+                                        rx.text("Built with",
+                                        size="1",
+                                        color = color.Color.PRIMARY.value,
+                                        opacity = "80%"),
+                                        rx.image(src='reflex.jpg',width ='15px',heigth='1px'),
+                                
+                                ),
+                                href=constants.REFLEX_WEB,
+                                is_external=True,
+                                text_decoration = "None",
+                                opacity = "0.6",
+                                border_radius="1em",
+                                _hover={
+                                        "opacity": 1,
+                                },                     
+                        ),
+                        align_items = 'center',                         
                 ),
         justify_content = 'center',
-        align_items = 'center',
         padding = "5px",
-        bg = color.Color.SECONDARY.value 
+        bg = color.Color.BGACCORDION.value 
         )
