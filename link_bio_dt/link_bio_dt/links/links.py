@@ -5,7 +5,9 @@ import link_bio_dt.styles.styles as styles
 import link_bio_dt.constants as constants
 
 def links() -> rx.Component:
-    return  rx.flex(                          
+    return  rx.box(    
+                rx.flex(
+                                    
                 link_button(rx.image(src= 'linkedin.svg'),constants.LINKEDIN,color.Color.PRIMARY.value),
                 link_button(rx.image(src= 'instagram.svg'),constants.INSTAGRAM,color.Color.PRIMARY.value),
                 link_button(rx.image(src= 'x.svg'),constants.X,color.Color.PRIMARY.value),
@@ -16,4 +18,5 @@ def links() -> rx.Component:
                 ,justify='center'
                 ,padding = styles.Spacer.DEFAULT.value           
                 )
+    )
             

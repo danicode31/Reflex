@@ -27,6 +27,7 @@ def index() -> rx.Component:
                     margin = styles.Spacer.BIG.value,                       
             )
                 ),
+            
                 links(),
                 
                 footer(),
@@ -44,7 +45,7 @@ app = rx.App(
     styles = styles.BASE_STYLE,
     
 )
-app.add_page(index)
+app.add_page(index,title='Daniel Taboada')
 app.compile
 
     

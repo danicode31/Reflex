@@ -19,7 +19,7 @@ def contenido() -> rx.Component:
                 rx.box(
                     rx.flex(
                         rx.vstack(
-                            rx.text("Soy ingeniero de datos y desarrollador Python, me apasiona utilizar la tecnología para resolver problemas complejos e impulsar el valor empresarial. Aprovecho mi experiencia en herramientas de ingeniería de datos como Teradata y secuencias de comandos Python para automatizar flujos de datos y extraer información valiosa."),
+                            rx.text("Soy ingeniero de datos y desarrollador ",rx.text.strong('Python'),", me apasiona utilizar la tecnología para resolver problemas complejos e impulsar el valor empresarial. Aprovecho mi experiencia en herramientas de ingeniería de datos como Teradata y secuencias de comandos Python para automatizar flujos de datos y extraer información valiosa."),
                             rx.text("Además, poseo sólidas habilidades en la suite Business Intelligence de Microsoft (SSIS, SSAS, SSRS) y Power BI, lo que me permite transformar datos sin procesar en informes y paneles procesables."),
                             rx.text("Apasionado por la tecnología y su aplicación en sistemas de información, con sólidas habilidades en metodologías ágiles como Scrum y Kanban. Poseo amplia experiencia en la elaboración de dashboards orientados a resultados, impulsando la mejora continua y optimizando procesos."),
                             rx.text("Experto en consultoría BI y desarrollo de scripts en Python, enfocado en la resolución de tareas complejas y rutinarias de manipulación de datos. Mis scripts automatizan procesos, reducen tiempos de ejecución y contribuyen a la eficiencia en ETL."),
@@ -304,8 +304,12 @@ def contenido() -> rx.Component:
                             color_scheme = 'gold',
                             variant="ghost",
                             orientation = 'vertical',
-                            bg = styles.color.BGACCORDION.value
+                            bg = styles.color.BGACCORDION.value,
+                            margin = styles.Spacer.BIG.value
+                            
                         ),
-                )               
+                
+                ),
+                rx.markdown("---",margin="10px") 
             
     )
