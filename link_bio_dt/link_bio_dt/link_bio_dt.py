@@ -15,16 +15,18 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.box(  
-                  navbar(),                  
+    return rx.box(
+                utils.lang(),  
+                navbar(),                  
             rx.center(
-                rx.vstack(    
-                    header(),
-                                            
+                rx.vstack( 
+                    header(),          
                     contenido(),
                     max_width = styles.MAX_WIDTH, 
                     width = "100%",
-                    margin = styles.Spacer.BIG.value,                       
+                    margin = styles.Spacing.BIG.value,     
+                        
+                                         
             )
                 ),
             
@@ -32,7 +34,7 @@ def index() -> rx.Component:
                 
                 footer(),
             
-            bg = styles.color.BACKGROUND.value,
+            bg = styles.Color.Color.BACKGROUND.value,
             
             ),
    
@@ -43,9 +45,36 @@ def index() -> rx.Component:
 app = rx.App(
     title = utils.index_title,
     styles = styles.BASE_STYLE,
+    stylesheets=[
+
+        "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
+        "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap",
+    
+    ],
+    head_components=[
+        rx.script(src='https://www.googletagmanager.com/gtag/js?id=GTM-KCZF535V'),
+        rx.script(
+            """window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'GTM-KCZF535V');
+            """    
+        )
+    ]
     
 )
-app.add_page(index,title='Daniel Taboada')
-app.compile
+app.add_page(
+    index,
+    title = utils.index_title,
+    description= utils.index_description,
+    image='favicon.ico',
+    meta=[
+        {"name": "og:type", "content" :"website"},
+        {"name": "og:title", "content": utils.index_title},
+        {"name": "og:description", "content": utils.index_description}
+    ]
+)
+
 
     

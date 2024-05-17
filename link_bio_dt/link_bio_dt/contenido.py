@@ -3,19 +3,14 @@ import link_bio_dt.styles.styles as styles
 import link_bio_dt.styles.color as color
 import link_bio_dt.constants as constants
 from link_bio_dt.components.link_title import link_title
-from link_bio_dt.components.text_content import text_content
-from link_bio_dt.components.text_content import tecno_utils
+from link_bio_dt.components.text_content import text_content, text_title, tecno_utils,text_content_item
+#from link_bio_dt.components.text_content import tecno_utils
 
 
 def contenido() -> rx.Component:
     return  rx.box(
                 rx.markdown("---"), 
-                rx.chakra.heading("""Sobre mi""",
-                        size= 'lg',
-                        color = color.Color.PRIMARY.value,
-                        padding = "30px 0px",
-                        text_shadow = "2px 2px 5px"
-                        ),
+                text_title("Sobre mi"),
                 rx.box(
                     rx.flex(
                         rx.vstack(
@@ -30,24 +25,16 @@ def contenido() -> rx.Component:
                         padding = '20px'
                     )
                     ,rx.image(src = "DataW.jpg")                    
-                    ,color = styles.color.CONTENT.value
-                    #,weight='light'
+                    ,color = styles.Color.Color.CONTENT.value
                     ,text_align = 'justify'
                     ),
                                     
-                
-                rx.chakra.heading("""Experiencia Laboral""",
-                        size= 'lg',
-                        color = color.Color.PRIMARY.value,
-                        high_contrast=True,
-                        padding = "30px 0px",
-                        text_shadow = "2px 2px 5px"                   
-                        ), 
+                text_title("Experiencia Laboral"), 
                 rx.box(
                     rx.accordion.root(
                             rx.accordion.item(
                                 # NEORIS
-                                header=rx.chakra.heading("Actualmente",color = styles.color.PRIMARY.value,size='md'),
+                                header=rx.chakra.heading("Actualmente",color = color.Color.PRIMARY.value,size='md'),
                                      
                                 content= rx.center(
                                     rx.flex(
@@ -60,21 +47,21 @@ def contenido() -> rx.Component:
                                         ),
                                         rx.chakra.heading('Data Engineer',size='lg'),
                                         rx.text(text_content("Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services.")),
-                                        rx.text.strong(text_content(""" Tareas Realizadas:""")),
-                                        rx.text.em(text_content(""" • Relevamiento y análisis de los requerimientos de negocio """)),
-                                        rx.text.em(text_content(""" • Planificación de Desacople """)),
-                                        rx.text.em(text_content(""" • Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server """)),
-                                        rx.text.em(text_content(""" • Mapeo de datos """)),
-                                        rx.text.em(text_content(""" • Análisis y diseño del modelo de datos """)),
-                                        rx.text.em(text_content(""" • Interacción con usuarios claves """)),
-                                        rx.text.em(text_content(""" • Mantenimiento de modelos """)),
+                                        text_content(""" Tareas Realizadas:"""),
+                                        text_content_item("Relevamiento y análisis de los requerimientos de negocio"),
+                                        text_content_item("Planificación de Desacople"),
+                                        text_content_item("Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server"),
+                                        text_content_item("Mapeo de datos"),
+                                        text_content_item("Análisis y diseño del modelo de datos"),
+                                        text_content_item("Interacción con usuarios claves"),
+                                        text_content_item("Mantenimiento de modelos"),
                                         rx.text(tecno_utils(constants.TECNOLOGIAS_NEORIS),align='right'),
                                         
                                         
                                         direction="column",
                                         spacing="4",
-                                        margin = styles.Spacer.SMALL.value,
-                                        padding = styles.Spacer.DEFAULT.value,
+                                        margin = styles.Spacing.SMALL.value,
+                                        padding = styles.Spacing.DEFAULT.value,
                                         bg = color.Color.SECONDARY.value
                                     ),
                                     
@@ -82,7 +69,7 @@ def contenido() -> rx.Component:
                             ),
                             # CDA Informática
                             rx.accordion.item(
-                                header=rx.chakra.heading("2023 - 2024",color = styles.color.PRIMARY.value,size='md'),
+                                header=rx.chakra.heading("2023 - 2024",color = color.Color.PRIMARY.value,size='md'),
                                      
                                 content= rx.center(
                                     rx.flex(
@@ -105,23 +92,23 @@ def contenido() -> rx.Component:
                                             
                                         )
                                         ,
-                                        rx.text.strong(text_content(""" Tareas Realizadas:""")),
-                                        rx.text.em(text_content(""" • Análisis de los requerimientos de negocio """)),
-                                        rx.text.em(text_content(""" • Desarrollo de Store Procedures (según reglas de negocio) """)),
-                                        rx.text.em(text_content(""" • Monitoreo con Control – M """)),
-                                        rx.text.em(text_content(""" • Incidentes y cancelacines, relanzamiento de jobs """)),
-                                        rx.text.em(text_content(""" • Análisis y corrección de incidentes relevados por el negocio """)),
-                                        rx.text.em(text_content(""" • Desarrollo de Dashboard en RP y PBI """)),
-                                        rx.text.em(text_content(""" • Reuniones de entendimiento de negocio """)),
-                                        rx.text.em(text_content(""" • Desarrollos de nuevos indicadores y mantenimiento """)),
-                                        rx.text.em(text_content(""" • Migración de tableros de PBI a Power BI cloud """)),
+                                        rx.text.strong(text_content("Tareas Realizadas:")),
+                                        text_content_item("Análisis de los requerimientos de negocio"),
+                                        text_content_item("Desarrollo de Store Procedures (según reglas de negocio)"),
+                                        text_content_item("Monitoreo con Control – M"),
+                                        text_content_item("Incidentes y cancelacines, relanzamiento de jobs"),
+                                        text_content_item("Análisis y corrección de incidentes relevados por el negocio"),
+                                        text_content_item("Desarrollo de Dashboard en RP y PBI"),
+                                        text_content_item("Reuniones de entendimiento de negocio"),
+                                        text_content_item("Desarrollos de nuevos indicadores y mantenimiento"),
+                                        text_content_item("Migración de tableros de PBI a Power BI cloud"),
                                         rx.text(tecno_utils(constants.TECNOLOGIAS_CDA),align='right'),
                                         
                                         
                                         direction="column",
                                         spacing="4",
-                                        margin = styles.Spacer.SMALL.value,
-                                        padding = styles.Spacer.DEFAULT.value,
+                                        margin = styles.Spacing.SMALL.value,
+                                        padding = styles.Spacing.DEFAULT.value,
                                         bg = color.Color.SECONDARY.value
                                     ),
                                     
@@ -130,7 +117,7 @@ def contenido() -> rx.Component:
                             ),
                             # CODERE BI
                             rx.accordion.item(
-                                header=rx.chakra.heading("2019 - 2023",color = styles.color.PRIMARY.value,size='md'),
+                                header=rx.chakra.heading("2020 - 2023",color = color.Color.PRIMARY.value,size='md',as_='h1'),
                                      
                                 content= rx.center(
                                     rx.flex(
@@ -156,8 +143,8 @@ def contenido() -> rx.Component:
                                         
                                         direction="column",
                                         spacing="4",
-                                        margin = styles.Spacer.SMALL.value,
-                                        padding = styles.Spacer.DEFAULT.value,
+                                        margin = styles.Spacing.SMALL.value,
+                                        padding = styles.Spacing.DEFAULT.value,
                                         bg = color.Color.SECONDARY.value
                                     ),
                                     
@@ -165,7 +152,7 @@ def contenido() -> rx.Component:
                             ),
                             # CODERE CONO SUR
                              rx.accordion.item(
-                                header=rx.chakra.heading("2017 - 2019",color = styles.color.PRIMARY.value,size='md'),
+                                header=rx.chakra.heading("2017 - 2019",color = color.Color.PRIMARY.value,size='md'),
                                 content=rx.center(
                                     rx.flex(
                                             rx.hstack(rx.image(src="codere_logo.jpeg",
@@ -190,8 +177,8 @@ def contenido() -> rx.Component:
                                         
                                         direction="column",
                                         spacing="4",
-                                        margin = styles.Spacer.SMALL.value,
-                                        padding = styles.Spacer.DEFAULT.value,
+                                        margin = styles.Spacing.SMALL.value,
+                                        padding = styles.Spacing.DEFAULT.value,
                                         bg = color.Color.SECONDARY.value
                                     ),
                                     
@@ -199,7 +186,7 @@ def contenido() -> rx.Component:
                             ),
                             # CODERE CONCILIACIONES
                               rx.accordion.item(
-                                header=rx.chakra.heading("2015 - 2016",color = styles.color.PRIMARY.value,size='md'),
+                                header=rx.chakra.heading("2015 - 2016",color = color.Color.PRIMARY.value,size='md'),
                                 content=rx.center(
                                     rx.flex(
                                             rx.hstack(rx.image(src="codere_logo.jpeg",
@@ -224,8 +211,8 @@ def contenido() -> rx.Component:
                                         
                                         direction="column",
                                         spacing="4",
-                                        margin = styles.Spacer.SMALL.value,
-                                        padding = styles.Spacer.DEFAULT.value,
+                                        margin = styles.Spacing.SMALL.value,
+                                        padding = styles.Spacing.DEFAULT.value,
                                         bg = color.Color.SECONDARY.value
                                     ),
                                     
@@ -233,7 +220,7 @@ def contenido() -> rx.Component:
                             ),
                             # CODERE SALA LANUS
                                rx.accordion.item(
-                                header=rx.chakra.heading("2010 - 2014",color = styles.color.PRIMARY.value,size='md'),
+                                header=rx.chakra.heading("2010 - 2014",color = color.Color.PRIMARY.value,size='md'),
                                 content=rx.center(
                                     rx.flex(
                                             rx.hstack(rx.image(src="codere_logo.jpeg",
@@ -258,8 +245,8 @@ def contenido() -> rx.Component:
                                         
                                         direction="column",
                                         spacing="4",
-                                        margin = styles.Spacer.SMALL.value,
-                                        padding = styles.Spacer.DEFAULT.value,
+                                        margin = styles.Spacing.SMALL.value,
+                                        padding = styles.Spacing.DEFAULT.value,
                                         bg = color.Color.SECONDARY.value
                                     ),
                                     
@@ -267,7 +254,7 @@ def contenido() -> rx.Component:
                             ),
                             # PASANTIA EPSON
                                rx.accordion.item(
-                                header=rx.chakra.heading("2008 - 2009",color = styles.color.PRIMARY.value,size='md'),
+                                header=rx.chakra.heading("2008 - 2009",color = color.Color.PRIMARY.value,size='md'),
                                 content=rx.center(
                                     rx.flex(
                                             rx.hstack(rx.image(src="epsonamerica_logo.jpeg",
@@ -292,8 +279,8 @@ def contenido() -> rx.Component:
                                         
                                         direction="column",
                                         spacing="4",
-                                        margin = styles.Spacer.SMALL.value,
-                                        padding = styles.Spacer.DEFAULT.value,
+                                        margin = styles.Spacing.SMALL.value,
+                                        padding = styles.Spacing.DEFAULT.value,
                                         bg = color.Color.SECONDARY.value
                                     ),
                                     
@@ -304,12 +291,13 @@ def contenido() -> rx.Component:
                             color_scheme = 'gold',
                             variant="ghost",
                             orientation = 'vertical',
-                            bg = styles.color.BGACCORDION.value,
-                            margin = styles.Spacer.BIG.value
+                            bg = color.Color.BGACCORDION.value,
+                            margin = styles.Spacing.BIG.value
                             
                         ),
                 
                 ),
-                rx.markdown("---",margin="10px") 
+                rx.markdown("---") 
             
     )
+    

@@ -8,15 +8,16 @@ def links() -> rx.Component:
     return  rx.box(    
                 rx.flex(
                                     
-                link_button(rx.image(src= 'linkedin.svg'),constants.LINKEDIN,color.Color.PRIMARY.value),
-                link_button(rx.image(src= 'instagram.svg'),constants.INSTAGRAM,color.Color.PRIMARY.value),
-                link_button(rx.image(src= 'x.svg'),constants.X,color.Color.PRIMARY.value),
-                link_button(rx.image(src= 'github.svg'),constants.GITHUB,color.Color.PRIMARY.value),
-                link_button(rx.image(src= 'email.svg'),constants.MAIL,color.Color.PRIMARY.value)
-                ,spacing= '4'
+                link_button('/icons/linkedin.svg',constants.LINKEDIN,'Linkedin'),
+                link_button('/icons/instagram.svg',constants.INSTAGRAM,'Instagram'),
+                link_button('/icons/x.svg',constants.X,'Twitter'),
+                link_button('/icons/github.svg',constants.GITHUB,'Github'),
+                link_button('/icons/email.svg',constants.MAIL,'Correo')
+                ,flex_direction = 'row-reverse'
+                ,spacing=styles.Size.BIG.value
                 ,width="100%"
                 ,justify='center'
-                ,padding = styles.Spacer.DEFAULT.value           
+                ,padding = styles.Spacing.BIG.value 
                 )
     )
             

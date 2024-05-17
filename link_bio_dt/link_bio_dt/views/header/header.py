@@ -11,7 +11,7 @@ def header() -> rx.Component:
                      border_radius = "100%",
                     ),
             #rx.chakra.avatar(name="Daniel Taboada", size="sm"),
-            rx.blockquote("""Data Engineer (Python, Teradata) | Business Intelligence (Power BI, SSIS, SSAS, SSRS) | Digital Transformation Enthusiast | Information Technology Management Student""", color = styles.color.CONTENT.value
+            rx.blockquote("""Data Engineer (Python, Teradata) | Business Intelligence (Power BI, SSIS, SSAS, SSRS) | Digital Transformation Enthusiast | Information Technology Management Student""", color = styles.Color.Color.CONTENT.value
             ,text_align = 'justify'),  
         ),
         

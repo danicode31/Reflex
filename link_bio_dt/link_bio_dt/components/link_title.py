@@ -1,12 +1,12 @@
 import reflex as rx
-import link_bio_dt.styles.styles as styles
+import link_bio_dt.styles.color as color
 
 def link_title(text:str, url:str) -> rx.Component:
     return rx.link(
                 rx.button(
                     rx.flex(
                         rx.vstack(
-                            rx.text(text,size='5',color = styles.color.CONTENT.value),
+                            rx.text(text,size='5',color = color.Color.CONTENT.value),
                             
                         ),
                     ),

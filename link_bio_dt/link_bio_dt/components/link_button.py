@@ -1,15 +1,23 @@
 import reflex as rx
+from link_bio_dt.styles import styles
 
-
-def link_button(text:str, url:str, color:str) -> rx.Component:
+def link_button(image:str, url:str,alt:str) -> rx.Component:
     return rx.link(
                 rx.button(
                     rx.flex(
                         rx.vstack(
-                            rx.text(text),
-                           
+                            rx.image(
+                                     src=image,
+                                     width=styles.Spacing.LARGE.value,
+                                     height =styles.Spacing.LARGE.value,
+                                     alt = alt
+                                     ),     
                         ),
                     ),
+                    color_scheme='gold',
+                    size = styles.Size.SMALL.value,
+                    variant='outline',
+                    radius =  'small'
                 ),    
                 href=url,
                 is_external=True,

@@ -1,4 +1,12 @@
 from enum import Enum
 
-class Font_text(Enum):
-    FONT_TEXT = "Diphylleia"
+
+class Font(Enum):
+    DEFAULT = "Open Sans"
+    TITLE = "Diphylleia"
+
+
+
+class FontWeight(Enum):
+    LIGHT = "300"
+    MEDIUM = "500"
