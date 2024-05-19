@@ -2,9 +2,8 @@ from enum import Enum
 
 
 class Font(Enum):
-    DEFAULT = "Open Sans"
+    DEFAULT = "Nanum Gothic"
     TITLE = "Diphylleia"
-
 
 
 class FontWeight(Enum):

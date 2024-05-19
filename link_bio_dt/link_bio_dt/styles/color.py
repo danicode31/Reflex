@@ -7,9 +7,9 @@ class Color(Enum):
     BACKGROUND = "#161b22"
     CONTENT = "#FFFFFF"
     BGACCORDION = "#272A2D"
-    
+
 
 class TextColor(Enum):
-    HEADER = "#F1F2F4"
+    HEADER = "#71624b"
     BODY = "#C3C7CB"
     FOOTER = "#A3ABB2"
