@@ -11,10 +11,11 @@ def links() -> rx.Component:
             link_button("/icons/linkedin.svg", constants.LINKEDIN, "Linkedin"),
             link_button("/icons/instagram.svg", constants.INSTAGRAM, "Instagram"),
             link_button("/icons/x.svg", constants.X, "Twitter"),
+            #link_button("/icons/discord.svg", constants.DISCORD, "Discord"),
             link_button("/icons/github.svg", constants.GITHUB, "Github"),
             link_button("/icons/email.svg", constants.MAIL, "Correo"),
             flex_direction="row-reverse",
-            spacing=styles.Size.BIG.value,
+            spacing=styles.Size.DEFAULT.value,
             width="auto",
             justify="center",
         )

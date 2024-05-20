@@ -8,7 +8,7 @@ def navbar() -> rx.Component:
         rx.vstack(
             rx.heading(
                 "Daniel Taboada",
-                font_family="Diphylleia",
+                font_family=styles.Font.TITLE,
                 size="9",
                 color=color.Color.CONTENT.value,
             ),
@@ -20,5 +20,6 @@ def navbar() -> rx.Component:
             background_color="#2f4a6577",
             text_shadow="2px 2px 5px",
             align_items="center",
-        )
+        ),
+        bg=color.Color.BGACCORDION.value
     )

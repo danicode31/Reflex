@@ -4,6 +4,7 @@ from link_bio_dt.views.header.header import header
 from link_bio_dt.components.footer import footer
 from link_bio_dt.about_me import about_me
 from link_bio_dt.Jobs import jobs
+from link_bio_dt.next import next
 import link_bio_dt.utils as utils
 import link_bio_dt.styles.styles as styles
 
@@ -21,7 +22,8 @@ def index() -> rx.Component:
                 rx.vstack(
                     header(),
                     about_me(),
-                    jobs(),
+                    jobs('Experiencia Laboral'),
+                    next(),
                     max_width=styles.MAX_WIDTH,
                     width="100%",
                     margin=styles.Spacing.SMALL.value,

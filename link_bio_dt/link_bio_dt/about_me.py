@@ -18,6 +18,9 @@ def about_me() -> rx.Component:
                     rx.text(
                         "Además, poseo sólidas habilidades en la suite Business Intelligence de Microsoft (SSIS, SSAS, SSRS) y Power BI, lo que me permite transformar datos sin procesar en informes y paneles procesables."
                     ),
+                    rx.spacer(),
+                    rx.image(src="DataW.jpg",alt='Data WareHouse'),
+                    rx.spacer(),
                     rx.text(
                         "Apasionado por la tecnología y su aplicación en sistemas de información, con sólidas habilidades en metodologías ágiles como Scrum y Kanban. Poseo amplia experiencia en la elaboración de dashboards orientados a resultados, impulsando la mejora continua y optimizando procesos."
                     ),
@@ -31,7 +34,7 @@ def about_me() -> rx.Component:
                 padding=styles.Spacing.SMALL.value,
                 
             ),
-            rx.image(src="DataW.jpg"),
+            
             color=styles.Color.Color.CONTENT.value,
             text_align="justify",
         ),

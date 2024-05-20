@@ -1,13 +1,14 @@
 # Tecnologias y herramientas
 TECNOLOGIAS_NEORIS = [
     "Teradata",
-    "SQL Server 2019",
+    "SQL Server",
     "SSIS",
     "Python",
     "Jira",
     "Control-M",
     "MS Excel",
 ]
+
 TECNOLOGIAS_CDA = [
     "Teradata",
     "POWER BI",
@@ -17,6 +18,7 @@ TECNOLOGIAS_CDA = [
     "Control-M",
     "MS Excel",
 ]
+
 TECNOLOGIAS_CODERE_BI = [
     "POWER BI",
     "SSIS",
@@ -24,18 +26,37 @@ TECNOLOGIAS_CODERE_BI = [
     "SSRS",
     "Python",
     "Jira",
-    "Reporting Services",
     "MS Excel",
 ]
+
+TECNOLOGIAS_CODERE_CS = [
+    "EVA CASH",
+    "WinSystems",
+    "CAS - Boldt",
+    "CAS - Report",
+    "MS Excel",
+    "MS Power Point", 
+]
+
+TECNOLOGIAS_CODERE_PO = [
+    "SAP",
+    "ATM system",
+    "CAS - TITO",
+    "CAS - Report",
+    "MS Excel",
+    "MS Power Point",   
+]
+
 
 
 # Webs
 REFLEX_WEB = "https://reflex.dev/"
+WEB = "https://danieltaboada.reflex.run"
 NEORIS = "https://neoris.com/"
 CDA = "https://www.cdainfo.com/es"
 CODERE = "https://www.grupocodere.com/argentina/"
 EPSON = "https://epson.com.ar/"
-
+DISCORD = "https://discord.gg/DNK5jPGH"
 
 # Redes
 

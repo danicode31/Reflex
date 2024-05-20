@@ -55,30 +55,13 @@ BASE_STYLE = {
         "color": Color.TextColor.HEADER.value,
         "font_family": Font.DEFAULT.value,
         "font_weight": FontWeight.LIGHT.value,
-    }
+    },
+    rx.popover.content:{
+    'max_content' : 'auto',
+    "font_family": Font.DEFAULT.value,
+    'bg': Color.Color.CONTENT.value
+    },
+    
 }
 
 
-
-# navbar_title_style = dict(
-#     font_family=Font.LOGO.value,
-#     font_weight=FontWeight.MEDIUM.value,
-#     font_size=Size.LARGE.value
-# )
-
-# title_style = dict(
-#     width="100%",
-#     padding_top=Size.DEFAULT.value,
-#     font_size=Size.LARGE.value
-# )
-
-# button_title_style = dict(
-#     font_family=Font.TITLE.value,
-#     font_weight=FontWeight.MEDIUM.value,
-#     color=Color.HEADER.value,
-# )
-
-# button_body_style = dict(
-#     font_weight=FontWeight.LIGHT.value,
-#     color=Color.BODY.value
-# )
