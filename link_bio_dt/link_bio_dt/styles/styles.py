@@ -29,6 +29,7 @@ class Size(Enum):
 
 class Spacing(Enum):
     ZERO = "0px !important"
+    VERY_SMALL = "0.2em"
     SMALL = "0.5em"
     MEDIUM = "0.8em"
     DEFAULT = "1em"
@@ -57,11 +58,18 @@ BASE_STYLE = {
         "font_weight": FontWeight.LIGHT.value,
     },
     rx.popover.content:{
+    'min_width': '200px',
     'max_content' : 'auto',
     "font_family": Font.DEFAULT.value,
-    'bg': Color.Color.CONTENT.value
+    'bg': Color.Color.CONTENT.value,
     },
-    
+    rx.button:{
+        "font_family": Font.DEFAULT.value,
+        'bg': Color.TextColor.HEADER.value,
+        
+    }
 }
+
+
 
 

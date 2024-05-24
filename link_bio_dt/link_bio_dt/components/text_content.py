@@ -46,17 +46,16 @@ def tecno_utils(text: str) -> rx.Component:
                         rx.popover.close(
                             rx.button("Cerrar", color_scheme="gold"),
                         ),
-                        direction="column",
-                        spacing="4",
-                        
-                    )
+                    ),
+                    direction="column",
+                    spacing="4",
                 ),
                 align="end",
-                side="top",
-                Pylance = {'max_content' : 'auto'}
+                min_width="auto",
+                # side="top",
             ),
             modal=True,
-            
+
         ),
     )
 

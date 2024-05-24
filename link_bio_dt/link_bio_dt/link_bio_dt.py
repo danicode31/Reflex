@@ -9,9 +9,6 @@ import link_bio_dt.utils as utils
 import link_bio_dt.styles.styles as styles
 
 
-class State(rx.State):
-    pass
-
 
 def index() -> rx.Component:
     return (
@@ -21,7 +18,7 @@ def index() -> rx.Component:
             rx.center(
                 rx.vstack(
                     header(),
-                    about_me(),
+                    about_me('Sobre mi'),
                     jobs('Experiencia Laboral'),
                     next(),
                     max_width=styles.MAX_WIDTH,

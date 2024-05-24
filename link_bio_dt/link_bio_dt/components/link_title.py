@@ -4,7 +4,7 @@ import link_bio_dt.styles.color as color
 
 def link_title(text: str, image: str, url: str) -> rx.Component:
     return rx.hstack(
-        rx.image(src=image, width="64px", heigth="64px", border_radius="20%"),
+        rx.image(src=image, width="64px", heigth="64px", border_radius="20%",loading='lazy', alt='logo de la empresa'),
         rx.link(
             rx.button(
                 rx.flex(

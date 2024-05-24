@@ -3,15 +3,15 @@ import link_bio_dt.styles.styles as styles
 from link_bio_dt.components.text_content import text_title
 
 
-def about_me() -> rx.Component:
+def about_me(title: str) -> rx.Component:
     return rx.box(
         rx.markdown("---"),
-        text_title("Sobre mi"),
+        text_title(title),
         rx.box(
             rx.flex(
                 rx.vstack(
                     rx.text(
-                        "Soy ingeniero de datos y desarrollador ",
+                        "Soy ",rx.text.strong("Data Engineer"), " y desarrollador ",
                         rx.text.strong("Python"),
                         ", me apasiona utilizar la tecnología para resolver problemas complejos e impulsar el valor empresarial. Aprovecho mi experiencia en herramientas de ingeniería de datos como Teradata y secuencias de comandos Python para automatizar flujos de datos y extraer información valiosa.",
                     ),
@@ -19,7 +19,7 @@ def about_me() -> rx.Component:
                         "Además, poseo sólidas habilidades en la suite Business Intelligence de Microsoft (SSIS, SSAS, SSRS) y Power BI, lo que me permite transformar datos sin procesar en informes y paneles procesables."
                     ),
                     rx.spacer(),
-                    rx.image(src="DataW.jpg",alt='Data WareHouse'),
+                    rx.image(src="DataW.jpg",loading='lazy',alt='Data WareHouse',min_width='250px', border_color =styles.Color.Color.CONTENT.value),
                     rx.spacer(),
                     rx.text(
                         "Apasionado por la tecnología y su aplicación en sistemas de información, con sólidas habilidades en metodologías ágiles como Scrum y Kanban. Poseo amplia experiencia en la elaboración de dashboards orientados a resultados, impulsando la mejora continua y optimizando procesos."

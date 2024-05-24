@@ -16,7 +16,9 @@ def jobs(title: str) -> rx.Component:
         rx.box(text_title(title)),
         rx.flex(
             rx.vstack(
-                rx.image(src="/ia.jpg", margin_y="20px"),
+                rx.box(
+                    rx.image(src="/ia.jpg", margin_y="20px",min_width='250px',loading='lazy')
+                ),
                 rx.accordion.root(
                     rx.accordion.item(
                         # NEORIS

@@ -4,22 +4,41 @@ import link_bio_dt.styles.styles as styles
 
 
 def navbar() -> rx.Component:
-    return rx.center(
-        rx.vstack(
-            rx.heading(
-                "Daniel Taboada",
-                font_family=styles.Font.TITLE,
-                size="9",
-                color=color.Color.CONTENT.value,
-            ),
-            margin=styles.Spacing.BIG.value,
-            width=styles.MAX_WIDTH,
-            box_shadow="-10px -10px #0073b0",
-            border="2px solid",
-            border_color="#0073b0",
-            background_color="#2f4a6577",
-            text_shadow="2px 2px 5px",
-            align_items="center",
+    return (
+        rx.flex(
+            rx.vstack(
+                rx.image(
+                    src="/cover_band.jpg",
+                    width=styles.MAX_WIDTH,
+                    alt="presentacion",
+                ),
+            #     rx.hstack(
+                  
+            #     ),
+            #     rx.menu.root(
+            #         rx.menu.trigger(
+            #             rx.button("Menu",justify= 'center'
+            #                       ),
+                        
+            #         ),
+            #         rx.menu.content(
+            #             rx.menu.item("item 1"),
+            #             rx.menu.separator(),
+            #             rx.menu.item("Item 2"),
+            #             rx.menu.item("Item 3"),
+            #             width="10rem",
+            #         ),
+            #     ),
+            #     # top="0px",
+            #     # padding="1em",
+            #     # height="4em",
+            #     # width="100%",
+            #     # #z_index="5",
+            # ),
+            
         ),
-        bg=color.Color.BGACCORDION.value
+            align_items="center",
+            justify_content="center",
+            bg=color.Color.BGACCORDION.value,
+    )
     )

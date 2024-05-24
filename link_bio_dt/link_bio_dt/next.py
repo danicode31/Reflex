@@ -13,15 +13,33 @@ from link_bio_dt.components.text_content import (
 
 def next() -> rx.Component:
     return rx.box(
-        rx.markdown("---"),
+        rx.divider(color_scheme='gold'),
         text_title("Próximamente"),
         rx.spacer(),
         rx.flex(
-            rx.vstack(
-                text_content_item("Se están trabajando sobre nuevas secciones y más contenido..."),
-                rx.image(src="tiempo.jpg",alt='tiem',margin_y=styles.Spacing.DEFAULT.value),
-            ),
-            
+            rx.center(
+                rx.vstack(
+                    text_content_item(
+                        "Se están trabajando sobre nuevas secciones y más contenido..."
+                    ),
+                    rx.image(
+                        src="tiempo.jpg",
+                        alt="tiem",
+                        margin_y=styles.Spacing.DEFAULT.value,
+                    ),
+                    rx.button(
+                        "Descargar CV",
+                        on_click=rx.download(url="/CV Data Engineer - TABOADA.pdf"),
+                        opacity=0.6,
+                        
+                        _hover={
+                            "opacity": 1,
+                        },
+                        
+                    ),
+                    align='center',
+                ),
+               
+            )
         ),
-        rx.spacer()
     )
