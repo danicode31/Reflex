@@ -1,13 +1,13 @@
 import reflex as rx
 from link_bio_dt.components.navbar import navbar
-from link_bio_dt.views.header.header import header
+from link_bio_dt.components.header import header
 from link_bio_dt.components.footer import footer
 from link_bio_dt.about_me import about_me
 from link_bio_dt.Jobs import jobs
 from link_bio_dt.next import next
 import link_bio_dt.utils as utils
 import link_bio_dt.styles.styles as styles
-
+import link_bio_dt.styles.color as color
 
 
 def index() -> rx.Component:
@@ -18,13 +18,14 @@ def index() -> rx.Component:
             rx.center(
                 rx.vstack(
                     header(),
-                    about_me('Sobre mi'),
-                    jobs('Experiencia Laboral'),
+                    about_me("Sobre mi"),
+                    jobs("Experiencia Laboral"),
                     next(),
                     max_width=styles.MAX_WIDTH,
                     width="100%",
                     margin=styles.Spacing.SMALL.value,
-                )
+                ),
+                
             ),
             # links(),
             footer(),
@@ -36,7 +37,7 @@ def index() -> rx.Component:
 app = rx.App(
     title=utils.index_title,
     stylesheets=styles.STYLESHEETS,
-    style = styles.BASE_STYLE,
+    style=styles.BASE_STYLE,
     head_components=[
         rx.script(src="https://www.googletagmanager.com/gtag/js?id=GTM-KCZF535V"),
         rx.script(

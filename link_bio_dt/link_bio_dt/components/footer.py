@@ -13,33 +13,22 @@ def footer() -> rx.Component:
                 href=constants.WEB,
                 is_external=False,
                 text_decoration="None",
-                opacity="0.6",
                 border_radius="1em",
-                color_scheme="gold",
-                _hover={
-                    "opacity": 1,
-                },
             ),
-            text_footer("DATA SPECIALIST | DATA ENGINEER | CONSULTOR BI"),
+            rx.text(
+                "DATA SPECIALIST | DATA ENGINEER | CONSULTOR BI",size='1'
+            ),
             links(),
             rx.link(
                 rx.hstack(
-                    rx.text(
-                        "Built with",
-                        size="1",
-                        color=color.Color.CONTENT.value,
-                        opacity="80%",
-                    ),
-                    rx.image(src="reflex.jpg", width="15px", heigth="15px"),
+                    text_footer("Built with"),
+                    rx.image(src="reflex.jpg", width="15px", heigth="15px",align_items="center"),
+                    align_items="center",
                 ),
                 href=constants.REFLEX_WEB,
                 is_external=True,
                 text_decoration="None",
-                opacity="0.6",
-                border_radius="1em",
-                _hover={
-                    "opacity": 1,
-                },
+                
             ),
             align_items="center",
         ),
@@ -47,3 +36,4 @@ def footer() -> rx.Component:
         padding="15px",
         bg=color.Color.BGACCORDION.value,
     )
+

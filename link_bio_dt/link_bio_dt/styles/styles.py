@@ -52,21 +52,20 @@ BASE_STYLE = {
         "font_family": Font.DEFAULT.value,
         "font_weight": FontWeight.LIGHT.value,
     },
+    rx.heading:{
+        "color": Color.TextColor.HEADER.value,
+        "font_family": Font.DEFAULT.value,
+        "font_weight": FontWeight.LIGHT.value,
+    },
     rx.chakra.heading:{
         "color": Color.TextColor.HEADER.value,
         "font_family": Font.DEFAULT.value,
         "font_weight": FontWeight.LIGHT.value,
     },
-    rx.popover.content:{
-    'min_width': '200px',
-    'max_content' : 'auto',
-    "font_family": Font.DEFAULT.value,
-    'bg': Color.Color.CONTENT.value,
-    },
     rx.button:{
-        "font_family": Font.DEFAULT.value,
-        'bg': Color.TextColor.HEADER.value,
-        
+    "font_family": Font.DEFAULT.value,
+    'bg': Color.TextColor.HEADER.value,
+
     }
 }
 

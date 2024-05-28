@@ -17,14 +17,14 @@ def text_content_item(text: str) -> rx.Component:
     return rx.hstack(
         rx.icon("square-check-big"),
         rx.text(
-            rx.text.em(
+            rx.text(
                 text,
                 font_family=styles.Font.DEFAULT.value,
                 color=styles.Color.Color.CONTENT.value,
                 margin="5px",
                 text_align="justify",
             ),
-            size="2",
+            size='3',
         ),
         opacity="0.6",
         _hover={
@@ -38,6 +38,10 @@ def tecno_utils(text: str) -> rx.Component:
         rx.popover.root(
             rx.popover.trigger(
                 rx.button("Tecnologías Utilizadas", color_scheme="gold"),
+                opacity="0.6",
+                _hover={
+                    "opacity": 1,
+        },
             ),
             rx.popover.content(
                 rx.flex(
@@ -52,19 +56,17 @@ def tecno_utils(text: str) -> rx.Component:
                 ),
                 align="end",
                 min_width="auto",
-                # side="top",
             ),
             modal=True,
-
         ),
     )
 
 
 def text_title(text: str) -> rx.Component:
-    return rx.chakra.heading(
+    return rx.heading(
         text,
         font_family=styles.Font.TITLE.value,
-        size="2xl",
+        size="9",
         color=styles.Color.Color.PRIMARY.value,
         padding="30px 0px",
         text_shadow="2px 2px 5px",
@@ -74,8 +76,10 @@ def text_title(text: str) -> rx.Component:
 def text_footer(text: str) -> rx.Component:
     return rx.text(
         text,
-        font_family=styles.Font.TITLE.value,
-        size=styles.Size.VERY_SMALL.value,
+        font_family=styles.Font.DEFAULT.value,
+        size='2',
         color=styles.Color.Color.CONTENT.value,
-        opacity="50%",
+        opacity="0.6",
+        _hover={
+            "opacity": "1"},
     )
