@@ -54,7 +54,7 @@ REFLEX_WEB = "https://reflex.dev/"
 WEB = "https://danieltaboada.reflex.run"
 NEORIS = "https://neoris.com/"
 CDA = "https://www.cdainfo.com/es"
-CODERE = "https://www.grupocodere.com/argentina/"
+CODERE = "https://bingos.codere.bet.ar/"
 EPSON = "https://epson.com.ar/"
 DISCORD = "https://discord.gg/DNK5jPGH"
 
@@ -65,3 +65,9 @@ INSTAGRAM = "https://www.instagram.com/danieltaboadaok/"
 X = "https://twitter.com/taboadad87"
 GITHUB = "https://github.com/danicode31"
 MAIL = "mailto:taboadadanielg@gmail.com"
+
+
+
+#TITULOS
+
+libros =['De animales a dioses - Yuval Noah Harari','Homo Deus - Yuval Noah Harari']

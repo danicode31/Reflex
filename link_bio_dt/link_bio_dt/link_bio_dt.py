@@ -5,6 +5,7 @@ from link_bio_dt.components.footer import footer
 from link_bio_dt.about_me import about_me
 from link_bio_dt.Jobs import jobs
 from link_bio_dt.next import next
+from link_bio_dt.academy import academy
 import link_bio_dt.utils as utils
 import link_bio_dt.styles.styles as styles
 import link_bio_dt.styles.color as color
@@ -20,6 +21,7 @@ def index() -> rx.Component:
                     header(),
                     about_me("Sobre mi"),
                     jobs("Experiencia Laboral"),
+                    academy("Formación Académica"),
                     next(),
                     max_width=styles.MAX_WIDTH,
                     width="100%",
