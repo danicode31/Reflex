@@ -6,17 +6,34 @@ import link_bio_dt.constants as constants
 
 
 def links() -> rx.Component:
-    return rx.box(
+    return rx.vstack(
         rx.flex(
-            link_button("/icons/linkedin.svg", constants.LINKEDIN,'linkedin'),
-            link_button("/icons/instagram.svg", constants.INSTAGRAM,'Instagram'),
-            link_button("/icons/x.svg", constants.X,'X'),
-            #link_button("/icons/discord.svg", constants.DISCORD, "Discord"),
-            link_button("/icons/github.svg", constants.GITHUB,"Github"),
-            link_button("/icons/email.svg", constants.MAIL,"Correo"),
+            link_button("/icons/linkedin.svg", constants.LINKEDIN, "linkedin"),
+            link_button("/icons/instagram.svg", constants.INSTAGRAM, "Instagram"),
+            link_button("/icons/x.svg", constants.X, "X"),
+            # link_button("/icons/discord.svg", constants.DISCORD, "Discord"),
+            link_button("/icons/github.svg", constants.GITHUB, "Github"),
+            link_button("/icons/email.svg", constants.MAIL, "Correo"),
             flex_direction="row-reverse",
             spacing=styles.Size.LARGE.value,
-            width="auto", 
-            justify="center",
-        )
+            
+            margin="10px",
+            justify_content="center",
+        ),
+        
+        rx.link(
+            rx.button(
+                "Descargar CV",
+                opacity=0.6,
+                _hover={
+                    "opacity": 1,
+                },
+            ),
+            href="/CV Data Engineer - TABOADA.pdf",
+            is_external=True,
+            justify_content="center",
+        ),
+        align_items="center",
+        width="100%",
+        
     )

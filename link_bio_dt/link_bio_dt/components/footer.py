@@ -2,7 +2,7 @@ import reflex as rx
 import link_bio_dt.styles.color as color
 import link_bio_dt.constants as constants
 from link_bio_dt.components.text_content import text_footer
-from link_bio_dt.links.links import links
+
 
 
 def footer() -> rx.Component:
@@ -18,7 +18,7 @@ def footer() -> rx.Component:
             rx.text(
                 "DATA SPECIALIST | DATA ENGINEER | CONSULTOR BI",size='1'
             ),
-            links(),
+            
             rx.link(
                 rx.hstack(
                     text_footer("Built with"),

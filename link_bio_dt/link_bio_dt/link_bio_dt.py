@@ -9,7 +9,7 @@ from link_bio_dt.academy import academy
 import link_bio_dt.utils as utils
 import link_bio_dt.styles.styles as styles
 import link_bio_dt.styles.color as color
-
+from link_bio_dt.links.links import links
 
 def index() -> rx.Component:
     return (
@@ -19,6 +19,7 @@ def index() -> rx.Component:
             rx.center(
                 rx.vstack(
                     header(),
+                    links(),
                     about_me("Sobre mi"),
                     jobs("Experiencia Laboral"),
                     academy("Formación Académica"),
@@ -29,7 +30,7 @@ def index() -> rx.Component:
                 ),
                 
             ),
-            # links(),
+            
             footer(),
             bg=styles.Color.Color.BACKGROUND.value,
         ),

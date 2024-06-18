@@ -5,7 +5,7 @@ import link_bio_dt.styles.color as color
 
 def header() -> rx.Component:
     return rx.vstack(
-        #rx.chakra.avatar(name="Daniel Taboada", size="sm"),
+        # rx.chakra.avatar(name="Daniel Taboada", size="sm"),
         rx.desktop_only(
             rx.box(
                 rx.center(
@@ -18,7 +18,7 @@ def header() -> rx.Component:
                             alt="perfil",
                             margin_y=styles.Spacing.DEFAULT.value,
                             align="right",
-                            loading='lazy'
+                            loading="lazy",
                         ),
                         rx.vstack(
                             rx.heading(
@@ -26,8 +26,10 @@ def header() -> rx.Component:
                                 font_family=styles.Font.TITLE,
                                 size="9",
                                 color=color.Color.CONTENT.value,
-                                align="center",
-                                margin=styles.Spacing.VERY_SMALL.value
+                                text_align="center",
+                                margin=styles.Spacing.VERY_SMALL.value,
+                                align_content="center",
+                                justify_items="center",
                             ),
                             margin_y=styles.Spacing.BIG.value,
                             margin_x=styles.Spacing.LARGE.value,
@@ -39,8 +41,8 @@ def header() -> rx.Component:
                             text_shadow="2px 2px 5px",
                             align_items="center",
                             align_content="center",
-                            justify_content="center",
                         ),
+                        justify_content="center",
                         align="center",
                     ),
                 ),
@@ -49,7 +51,7 @@ def header() -> rx.Component:
                     color=styles.Color.Color.CONTENT.value,
                     text_align="justify",
                 ),
-            )
+            ),
         ),
         rx.mobile_and_tablet(
             rx.box(
@@ -63,7 +65,7 @@ def header() -> rx.Component:
                             alt="perfil",
                             margin_y=styles.Spacing.DEFAULT.value,
                             align="right",
-                            loading='lazy'
+                            loading="lazy",
                         ),
                         rx.vstack(
                             rx.heading(

@@ -22,17 +22,6 @@ def next() -> rx.Component:
                     alt="tiempo",
                     margin_y=styles.Spacing.DEFAULT.value,
                 ),
-                rx.link(
-                    rx.button(
-                        "Descargar CV",
-                        opacity=0.6,
-                        _hover={
-                            "opacity": 1,
-                        },   
-                    ),
-                    href="/CV Data Engineer - TABOADA.pdf",
-                    is_external=True,
-                ),
                 align_items="center",
                 flex_direction="column",
             ),

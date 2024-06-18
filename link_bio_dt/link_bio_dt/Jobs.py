@@ -384,6 +384,7 @@ def jobs(title: str) -> rx.Component:
                     color_scheme="gold",
                     variant="ghost",
                     bg=color.Color.BGACCORDION.value,
+                    width = '100%'
                 ),
                 align_items="center",
             ),
