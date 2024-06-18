@@ -29,7 +29,7 @@ def links() -> rx.Component:
                     "opacity": 1,
                 },
             ),
-            href="/CV Data Engineer - TABOADA.pdf",
+            href="/cert/CV Data Engineer - TABOADA.pdf",
             is_external=True,
             justify_content="center",
         ),
