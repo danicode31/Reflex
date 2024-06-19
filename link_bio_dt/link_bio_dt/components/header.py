@@ -11,7 +11,7 @@ def header() -> rx.Component:
                 rx.center(
                     rx.flex(
                         rx.image(
-                            src="perfil.jpg",
+                            src="perfil.WebP",
                             width="150px",
                             heigth="150px",
                             border_radius="100%",
@@ -50,15 +50,18 @@ def header() -> rx.Component:
                     """Data Engineer (Python, Teradata) | Business Intelligence (Power BI, SSIS, SSAS, SSRS) | Digital Transformation Enthusiast | Information Technology Management Student""",
                     color=styles.Color.Color.CONTENT.value,
                     text_align="justify",
+                    
                 ),
+                
             ),
+            
         ),
         rx.mobile_and_tablet(
             rx.box(
                 rx.center(
                     rx.flex(
                         rx.image(
-                            src="perfil.jpg",
+                            src="perfil.WebP",
                             width="120px",
                             heigth="120px",
                             border_radius="100%",

@@ -18,8 +18,8 @@ def next() -> rx.Component:
                     "Se están trabajando sobre nuevas secciones y más contenido..."
                 ),
                 rx.image(
-                    src="tiempo.jpg",
-                    alt="tiempo",
+                    src="ml.WebP",
+                    alt="ml",
                     margin_y=styles.Spacing.DEFAULT.value,
                 ),
                 align_items="center",

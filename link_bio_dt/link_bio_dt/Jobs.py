@@ -18,7 +18,7 @@ def jobs(title: str) -> rx.Component:
             rx.vstack(
                 rx.box(
                     rx.image(
-                        src="/ia.jpg",
+                        src="/ia.WebP",
                         margin_y="20px",
                         min_width="250px",
                     )
@@ -30,7 +30,7 @@ def jobs(title: str) -> rx.Component:
                             "Actualmente", color=color.TextColor.HEADER.value, size="6"
                         ),
                         content=rx.flex(
-                            link_title("Neoris", "neoris_logo.jpeg", constants.NEORIS),
+                            link_title("Neoris", "neoris_logo.WebP", constants.NEORIS),
                             rx.chakra.heading("Data Engineer"),
                             text_content("Ingreso:  3 de abril del 2024"),
                             rx.spacer(),
@@ -75,7 +75,7 @@ def jobs(title: str) -> rx.Component:
                         content=rx.flex(
                             link_title(
                                 "CDA Informática",
-                                "cda_informatica_logo.jpeg",
+                                "cda_informatica_logo.WebP",
                                 constants.CDA,
                             ),
                             rx.chakra.heading("Data Engineer"),
@@ -135,7 +135,7 @@ def jobs(title: str) -> rx.Component:
                         content=rx.center(
                             rx.flex(
                                 link_title(
-                                    "Codere", "codere_logo.jpeg", constants.CODERE
+                                    "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
                                 rx.chakra.heading("Business Intelligence"),
                                 rx.flex(
@@ -208,7 +208,7 @@ def jobs(title: str) -> rx.Component:
                         content=rx.center(
                             rx.flex(
                                 link_title(
-                                    "Codere", "codere_logo.jpeg", constants.CODERE
+                                    "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
                                 rx.chakra.heading("Analista de CI - Cono Sur"),
                                 rx.flex(
@@ -262,7 +262,7 @@ def jobs(title: str) -> rx.Component:
                         content=rx.center(
                             rx.flex(
                                 link_title(
-                                    "Codere", "codere_logo.jpeg", constants.CODERE
+                                    "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
                                 rx.chakra.heading("Analista de PO"),
                                 rx.flex(
@@ -316,7 +316,7 @@ def jobs(title: str) -> rx.Component:
                         content=rx.center(
                             rx.flex(
                                 link_title(
-                                    "Codere", "codere_logo.jpeg", constants.CODERE
+                                    "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
                                 rx.chakra.heading("Asistente de slots"),
                                 rx.flex(
@@ -359,7 +359,7 @@ def jobs(title: str) -> rx.Component:
                         ),
                         content=rx.flex(
                             link_title(
-                                "Epson", "epsonamerica_logo.jpeg", constants.EPSON
+                                "Epson", "epsonamerica_logo.WebP", constants.EPSON
                             ),
                             rx.chakra.heading("Técnico Eletrónico - Pasantía"),
                             # rx.chakra.text(text_content(""" Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services.""")),

@@ -20,7 +20,7 @@ def about_me(title: str) -> rx.Component:
                 ),
                 rx.spacer(),
                 rx.image(
-                    src="DataW.jpg",
+                    src="DataW.WebP",
                     loading="lazy",
                     alt="Data WareHouse",
                     min_width="250px",
@@ -40,6 +40,5 @@ def about_me(title: str) -> rx.Component:
             padding=styles.Spacing.SMALL.value,
         ),
         color=styles.Color.Color.CONTENT.value,
-        text_align="justify",
         align_content="center",
     )

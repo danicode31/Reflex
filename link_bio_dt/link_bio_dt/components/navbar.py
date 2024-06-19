@@ -7,7 +7,7 @@ def navbar() -> rx.Component:
     return rx.flex(
         rx.vstack(
             rx.image(
-                src="/R.png",
+                src="/R.WebP",
                 width=styles.MAX_WIDTH,
                 alt="presentacion",
             ),
