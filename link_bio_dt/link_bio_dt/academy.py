@@ -11,7 +11,7 @@ def academy(title: str) -> rx.Component:
         text_title(title),
         rx.flex(
             rx.grid(
-                link_card("2024", " TecLab - Data Science. En curso."),
+                #link_card("2024", " Educación IT - Data Engineer. En curso."),
                 link_card(
                     "2018",
                     " UADE - Lic. en Gestión de Tecnología de la Información. En curso.",
@@ -53,14 +53,14 @@ def academy(title: str) -> rx.Component:
                         ),
                         link_card_cert(
                             "Certificado de Python Programming - Educación IT",
-                            "/cert/certificado_python.pdf",
+                            "/cert/Certificado-Python-Programming-EducaciónIT.pdf",
                         ),link_card_cert(
                             "Certificado de Python Programming - Udemy",
                             "/cert/udemy_python.pdf",
                         ),
                         link_card_cert(
                             "Certificado de Protocolos HTTPS - Educación IT",
-                            "/cert/Certificado de Protocolos.pdf",
+                            "/cert/Certificado-Protocolo-HTTPS-EducaciónIT.pdf",
                         ),
                         link_card_cert(
                             "Certificado CCNA CISCO - Carta",
@@ -73,11 +73,11 @@ def academy(title: str) -> rx.Component:
                         
                         link_card_cert(
                             "Certificado Software Tester - Educación IT",
-                            "/cert/Certificado Tester 1.pdf",
+                            "/cert/Certificado-Software-Tester-QA-EducaciónIT.pdf",
                         ),
                         link_card_cert(
                             "Certificado Software Tester QA avanzado - Educación IT",
-                            "/cert/Certificado Tester 2.pdf",
+                            "/cert/Certificado-Software-Tester-QA-Avanzado-EducaciónIT.pdf",
                         ),
                         link_card_cert(
                             "Certificado de Operador de Mercado Bursátil",

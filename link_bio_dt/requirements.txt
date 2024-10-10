@@ -1,3 +1,5 @@
+JIT==0.2.7
+numba==0.60.0
+pandas==2.2.2
 pipreqs==0.5.0
-pytz==2024.1
-reflex==0.5.1
+reflex==0.5.9
