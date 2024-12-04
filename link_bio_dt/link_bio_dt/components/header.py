@@ -5,7 +5,6 @@ import link_bio_dt.styles.color as color
 
 def header() -> rx.Component:
     return rx.vstack(
-        # rx.chakra.avatar(name="Daniel Taboada", size="sm"),
         rx.desktop_only(
             rx.box(
                 rx.center(
@@ -47,9 +46,10 @@ def header() -> rx.Component:
                     ),
                 ),
                 rx.blockquote(
-                    """Data Engineer (Python, Teradata) | Business Intelligence (Power BI, SSIS, SSAS, SSRS) | Digital Transformation Enthusiast | Information Technology Management Student""",
+                    """Data Engineer | Python developer | Digital Transformer | Teradata | AI Enthusiast | Student in Information Technology Management""",
                     color=styles.Color.Color.CONTENT.value,
                     text_align="justify",
+                    size="5"                   
                     
                 ),
                 

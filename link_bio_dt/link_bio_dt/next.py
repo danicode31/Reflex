@@ -1,9 +1,7 @@
 import reflex as rx
 import link_bio_dt.styles.styles as styles
-from link_bio_dt.components.link_title import link_title
 from link_bio_dt.components.text_content import (
     text_title,
-    text_content_item,
     text_content,
 )
 

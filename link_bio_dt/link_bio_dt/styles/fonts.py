@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class Font(Enum):
-    DEFAULT = "Nanum Gothic"
+    DEFAULT = "Roboto"
     TITLE = "Diphylleia"
 
 

@@ -14,10 +14,10 @@ def about_me(title: str) -> rx.Component:
                     " y desarrollador ",
                     rx.text.strong("Python"),
                     ", me apasiona utilizar la tecnología para resolver problemas complejos e impulsar el valor empresarial. Aprovecho mi experiencia en herramientas de ingeniería de datos como Teradata y secuencias de comandos Python para automatizar flujos de datos y extraer información valiosa.",
-                ),
+                size='4'),
                 rx.text(
-                    "Además, poseo sólidas habilidades en la suite Business Intelligence de Microsoft (SSIS, SSAS, SSRS) y Power BI, lo que me permite transformar datos sin procesar en informes y paneles procesables."
-                ),
+                    "Además, poseo sólidas habilidades en la suite Business Intelligence de Microsoft (SSIS, SSAS, SSRS) y Power BI, lo que me permite transformar datos sin procesar en informes y dashboards dinámicos.",
+                size='4'),
                 rx.spacer(),
                 rx.image(
                     src="DataW.WebP",
@@ -28,13 +28,16 @@ def about_me(title: str) -> rx.Component:
                 ),
                 rx.spacer(),
                 rx.text(
-                    "Apasionado por la tecnología y su aplicación en sistemas de información, con sólidas habilidades en metodologías ágiles como Scrum y Kanban. Poseo amplia experiencia en la elaboración de dashboards orientados a resultados, impulsando la mejora continua y optimizando procesos."
+                    "Soy un apasionado de la tecnología y la transformación digital, con un sólido historial en la implementación de soluciones de BI y automatización. Mis habilidades en metodologías ágiles y herramientas de visualización de datos me permiten traducir información compleja en insights accionables, impulsando la toma de decisiones estratégicas.",
+                size='4'
                 ),
                 rx.text(
-                    "Experto en consultoría BI y desarrollo de scripts en Python, enfocado en la resolución de tareas complejas y rutinarias de manipulación de datos. Mis scripts automatizan procesos, reducen tiempos de ejecución y contribuyen a la eficiencia en ETL."
+                    "Por otro lado, como consultor BI proactivo, me apasiona ayudar a las organizaciones a aprovechar al máximo sus datos. Combino mi expertise en Python + IA junto con metodologías ágiles, para diseñar e implementar soluciones de Business Intelligence innovadoras que generan un valor agregado. Me esfuerzo por encontrar soluciones efectivas a los desafíos de los clientes, siempre buscando oportunidades para optimizar procesos y mejorar los resultados.",
+                size='4'
                 ),
                 rx.text(
-                    "Comunicador efectivo y colaborador nato, con gran capacidad para trabajar en equipo y aportar valor a los proyectos. Me encuentro en constante búsqueda de desafíos que me permitan incrementar mi potencial y generar un impacto significativo en el producto o negocio."
+                    "Colaboro de manera fluida en equipos multidisciplinarios, aportando mi capacidad de comunicación y mi enfoque en la resolución de problemas. Soy un apasionado del trabajo en equipo y busco constantemente oportunidades para desarrollar nuevas habilidades y generar un impacto significativo en los proyectos.",
+                size='4'
                 ),
             ),
             padding=styles.Spacing.SMALL.value,

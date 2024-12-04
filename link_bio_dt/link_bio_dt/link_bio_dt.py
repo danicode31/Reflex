@@ -8,7 +8,6 @@ from link_bio_dt.next import next
 from link_bio_dt.academy import academy
 import link_bio_dt.utils as utils
 import link_bio_dt.styles.styles as styles
-import link_bio_dt.styles.color as color
 from link_bio_dt.links.links import links
 
 def index() -> rx.Component:
@@ -37,8 +36,8 @@ def index() -> rx.Component:
     )
 
 
+
 app = rx.App(
-    title=utils.index_title,
     stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE,
     head_components=[

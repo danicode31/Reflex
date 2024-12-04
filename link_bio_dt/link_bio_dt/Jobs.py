@@ -31,7 +31,7 @@ def jobs(title: str) -> rx.Component:
                         ),
                         content=rx.flex(
                             link_title("Neoris", "neoris_logo.WebP", constants.NEORIS),
-                            rx.chakra.heading("Data Engineer"),
+                            rx.heading("Data Engineer",size='8'),
                             text_content("Ingreso:  3 de abril del 2024"),
                             rx.spacer(),
                             text_content(
@@ -78,7 +78,7 @@ def jobs(title: str) -> rx.Component:
                                 "cda_informatica_logo.WebP",
                                 constants.CDA,
                             ),
-                            rx.chakra.heading("Data Engineer"),
+                            rx.heading("Data Engineer",size='8'),
                             rx.flex(
                                 rx.vstack(
                                     text_content("Ingreso: 4 de Septiembre de 2023"),
@@ -137,7 +137,7 @@ def jobs(title: str) -> rx.Component:
                                 link_title(
                                     "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
-                                rx.chakra.heading("Business Intelligence"),
+                                rx.heading("Business Intelligence",size='8'),
                                 rx.flex(
                                     rx.vstack(
                                         text_content("Ingreso: 6 de Enero de 2020"),
@@ -147,7 +147,7 @@ def jobs(title: str) -> rx.Component:
                                         ),
                                         rx.spacer(),
                                         text_content(
-                                            "Posteriormente, gracias a una búsqueda interna y al apoyo de excelentes personas que confiaron en mis capacidades, me incorporé al área de Business Intelligence (BI). Durante tres años, adquirí valiosos aprendizajes y gané la confianza que me permitió continuar creciendo y afrontar nuevos desafíos."
+                                            "Posteriormente, gracias a una búsqueda interna y al apoyo de excelentes personas que confiaron en mis capacidades, me incorporé al área de BI. Durante tres años, adquirí valiosos aprendizajes y gané la confianza que me permitió continuar creciendo y afrontar nuevos desafíos."
                                         ),
                                     ),
                                     direction="column",
@@ -210,7 +210,7 @@ def jobs(title: str) -> rx.Component:
                                 link_title(
                                     "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
-                                rx.chakra.heading("Analista de CI - Cono Sur"),
+                                rx.heading("Analista de CI - Cono Sur",size='8'),
                                 rx.flex(
                                     rx.vstack(
                                         text_content("Ingreso: 01 de Febrero de 2017"),
@@ -264,7 +264,7 @@ def jobs(title: str) -> rx.Component:
                                 link_title(
                                     "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
-                                rx.chakra.heading("Analista de PO"),
+                                rx.heading("Analista de PO",size='8'),
                                 rx.flex(
                                     rx.vstack(
                                         text_content("Ingreso: 10 de Agosto de 2015"),
@@ -318,13 +318,13 @@ def jobs(title: str) -> rx.Component:
                                 link_title(
                                     "Codere", "codere_logo.WebP", constants.CODERE
                                 ),
-                                rx.chakra.heading("Asistente de slots"),
+                                rx.heading("Asistente de slots",size='8'),
                                 rx.flex(
                                     rx.vstack(
                                         text_content("Ingreso: 01 de Marzo de 2010"),
                                         rx.spacer(),
                                         text_content(
-                                            "Mi primer trabajo formal lo inicié en la sala de Slots de Lanús, donde mi función principal era brindar cambio y atender las necesidades de los clientes que jugaban en la sala.Poco tiempo después, se me presentó la oportunidad de pasar al área de bingo para familiarizarme con su dinámica y trabajar allí un tiempo."
+                                            "Mi primer trabajo formal lo inicié en la sala de Slots de Lanús, donde mi función principal era brindar cambio y atender las necesidades de los clientes que jugaban en la sala. Poco tiempo después, se me presentó la oportunidad de pasar al área de bingo para familiarizarme con su dinámica y trabajar allí un tiempo."
                                         ),
                                         rx.spacer(),
                                         text_content(
@@ -361,17 +361,7 @@ def jobs(title: str) -> rx.Component:
                             link_title(
                                 "Epson", "epsonamerica_logo.WebP", constants.EPSON
                             ),
-                            rx.chakra.heading("Técnico Eletrónico - Pasantía"),
-                            # rx.chakra.text(text_content(""" Comencé a trabajar en Neoris el 3 de abril del 2024. Para un proyecto de desacople entre Prisma medios de pago y 3 empresas, en el cual se realizó un trabajo inicial de relevamiento del estado actual y posterioremente se dió inicio al desacople de Teradata hacia SQL Server 2019 con la utilización de Microsoft Integration Services.""")),
-                            # rx.chakra.text.strong(text_content(""" Tareas Realizadas:""")),
-                            # rx.chakra.text.em(text_content(""" • Relevamiento y análisis de los requerimientos de negocio """)),
-                            # rx.chakra.text.em(text_content(""" • Planificación de Desacople """)),
-                            # rx.chakra.text.em(text_content(""" • Diseño, creación y mantenimiento del proceso ETL en SSIS y SQL Server """)),
-                            # rx.chakra.text.em(text_content(""" • Mapeo de datos """)),
-                            # rx.chakra.text.em(text_content(""" • Análisis y diseño del modelo de datos """)),
-                            # rx.chakra.text.em(text_content(""" • Interacción con usuarios claves """)),
-                            # rx.chakra.text.em(text_content(""" • Mantenimiento de modelos """)),
-                            # rx.chakra.text(tecno_utils(constants.TECNOLOGIAS_CODERE_BI),align='right'),
+                            rx.heading("Técnico Eletrónico - Pasantía",size='8'),
                             direction="column",
                             spacing="4",
                             margin=styles.Spacing.SMALL.value,

@@ -57,11 +57,6 @@ BASE_STYLE = {
         "font_family": Font.DEFAULT.value,
         "font_weight": FontWeight.LIGHT.value,
     },
-    rx.chakra.heading:{
-        "color": Color.TextColor.HEADER.value,
-        "font_family": Font.DEFAULT.value,
-        "font_weight": FontWeight.LIGHT.value,
-    },
     rx.button:{
     "font_family": Font.DEFAULT.value,
     'bg': Color.TextColor.HEADER.value,

@@ -7,14 +7,14 @@ def link_card(anio: str, title: str) -> rx.Component:
     return rx.card(
         
             rx.blockquote(rx.vstack(
-                rx.text.strong(anio,font_size=styles.Spacing.BIG.value),
+                rx.text.strong(anio,font_size=styles.Spacing.LARGE.value),
                 title,
-                font_family = styles.Font.DEFAULT.value,
-                color = '#71624b',
+                font_family = styles.Font.DEFAULT,
+                color = "#FFFFFF",
                 size="3",
-                # bg=styles.Color.Color.PRIMARY,
                 text_align="center",
                 transform="scala(0.5)",
+                margin = '2px'
             ),
             color_scheme='gold'  
             ),
@@ -25,6 +25,7 @@ def link_card(anio: str, title: str) -> rx.Component:
                 "transform": "scale(1.1)",
                 "transition": "all 0.3s ease",
             },
+            bg=styles.Color.Color.SECONDARY
         )
   
   
@@ -35,16 +36,16 @@ def link_card_cert(title: str, ref:str) -> rx.Component:
             rx.blockquote(rx.vstack(
                 title,
                 font_family = styles.Font.DEFAULT.value,
-                color = '#71624b',
+                color = "#FFFFFF",
                 size="3",
-                text_align="center",
                 transform="scala(0.5)",
+                margin = '2px'
             ),
             color_scheme='gold'  
             ),
             _hover={
-                "bg": "green",
-                "border": " 3px solid green",
+                "bg": '#71624b',
+                "border": "3px solid #B08544",
                 "text_align": "center",
                 "transform": "scale(1.1)",
                 "transition": "all 0.3s ease",
@@ -55,5 +56,4 @@ def link_card_cert(title: str, ref:str) -> rx.Component:
         is_external=True,
         text_decoration="None",
         border_radius="1em",
-        color_scheme="gold",
     )   
